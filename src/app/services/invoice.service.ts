@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class InvoiceService {
-  private readonly BASE_URL = 'http://localhost:8080/';
+  private readonly BASE_URL = 'https://invoice-backend-i5iocka57a-ey.a.run.app/';
 
   constructor(private http: HttpClient) {
   }
