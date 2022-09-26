@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let invoice of invoices$ | async">
+    {{invoice.description}}
+    <span *ngIf="invoice.amount>2000"> *</span>
+  </li>
+</ul>

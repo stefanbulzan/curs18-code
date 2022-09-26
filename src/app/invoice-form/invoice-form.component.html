@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Add invoice</h1>
+<form [formGroup]="addInvoiceForm" (ngSubmit)="doSubmit()">
+  <div mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" placeholder="Amount" formControlName="amount">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Receiver</mat-label>
+      <input matInput placeholder="Receiver" formControlName="receiver">
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button type="submit" [disabled]="addInvoiceForm.invalid">Ok</button>
+  </div>
+
+</form>
